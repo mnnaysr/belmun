@@ -47,6 +47,23 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // ===================================
+    // HERO SLIDESHOW
+    // ===================================
+    const slides = document.querySelectorAll('.hero-slide');
+    if (slides.length > 0) {
+        let currentSlide = 0;
+        
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+        
+        // Change slide every 5 seconds
+        setInterval(nextSlide, 5000);
+    }
+    
+    // ===================================
     // REGISTRATION LINKS HANDLING
     // ===================================
     // Google Forms links - Update these with your actual Google Form URLs
@@ -57,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'delegate-link': ''     // Add your Delegate Google Form link here
     };
     
-    // Set up registration card links
+    // Set up registration box links
     Object.keys(registrationLinks).forEach(linkId => {
         const element = document.getElementById(linkId);
         if (element) {
