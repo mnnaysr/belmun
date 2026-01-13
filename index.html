@@ -10,7 +10,10 @@
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">BELMUN 2026</div>
+            <div class="logo">
+                <img src="logo.png" alt="BELMUN Logo" class="logo-image" id="logoImage">
+                <span>BELMUN 2026</span>
+            </div>
             <button class="mobile-menu-toggle" id="mobileMenuToggle">
                 <span></span>
                 <span></span>
@@ -27,12 +30,33 @@
 
     <!-- Hero Section -->
     <section class="hero">
+        <div class="hero-background"></div>
         <div class="hero-content">
             <h1 class="hero-title">BELMUN 2026</h1>
             <p class="hero-tagline">Empowering Tomorrow's Leaders Through Diplomatic Excellence</p>
             <div class="hero-buttons">
                 <a href="committees.html" class="btn btn-primary">Explore Committees</a>
-                <a href="contact.html" class="btn btn-secondary">Register Now</a>
+            </div>
+            <div class="registration-links">
+                <h3>Register As:</h3>
+                <div class="registration-grid">
+                    <a href="#" class="registration-card" id="secretariat-link">
+                        <div class="registration-icon">👔</div>
+                        <h4>Secretariat</h4>
+                    </a>
+                    <a href="#" class="registration-card" id="chair-link">
+                        <div class="registration-icon">🎯</div>
+                        <h4>Chair</h4>
+                    </a>
+                    <a href="#" class="registration-card" id="volunteer-link">
+                        <div class="registration-icon">🤝</div>
+                        <h4>Volunteer</h4>
+                    </a>
+                    <a href="#" class="registration-card" id="delegate-link">
+                        <div class="registration-icon">🌍</div>
+                        <h4>Delegate</h4>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="hero-overlay"></div>
@@ -66,7 +90,7 @@
         <div class="container">
             <h2>Ready to Make a Difference?</h2>
             <p>Join BELMUN 2026 and be part of a transformative diplomatic experience</p>
-            <a href="contact.html" class="btn btn-primary">Get Started</a>
+            <a href="#registration" class="btn btn-primary" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Register Now</a>
         </div>
     </section>
 

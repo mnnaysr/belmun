@@ -45,6 +45,44 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+    
+    // ===================================
+    // REGISTRATION LINKS HANDLING
+    // ===================================
+    // Google Forms links - Update these with your actual Google Form URLs
+    const registrationLinks = {
+        'secretariat-link': '', // Add your Secretariat Google Form link here
+        'chair-link': '',       // Add your Chair Google Form link here
+        'volunteer-link': '',   // Add your Volunteer Google Form link here
+        'delegate-link': ''     // Add your Delegate Google Form link here
+    };
+    
+    // Set up registration card links
+    Object.keys(registrationLinks).forEach(linkId => {
+        const element = document.getElementById(linkId);
+        if (element) {
+            element.addEventListener('click', function(e) {
+                const url = registrationLinks[linkId];
+                
+                if (url && url.trim() !== '') {
+                    // If URL is set, open it
+                    window.open(url, '_blank');
+                } else {
+                    // If URL is not set, show message
+                    e.preventDefault();
+                    alert('Registration form coming soon! Please check back later or contact us at belmun26@gmail.com');
+                }
+            });
+        }
+    });
+    
+    // Handle logo click - if no logo image exists, hide it
+    const logoImage = document.getElementById('logoImage');
+    if (logoImage) {
+        logoImage.addEventListener('error', function() {
+            this.style.display = 'none';
+        });
+    }
 });
 
 // ===================================
